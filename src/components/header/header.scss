@@ -1,23 +1,98 @@
 @import "../../assets/styles/valiables";
 
-.top-header {
+header {
   font-family: $generalFontFamily;
-  background-color: $colorBlue;
-  display: flex;
-  padding: 9px 110px 9px 25px;
-  color: $colorWhite;
-//harc vor li-in arandzin style tas first/second li-erin arandzin
-  li {
-    list-style-type: none;
-    text-align: right;
+  position: relative;
+  box-shadow: rgba(13, 13, 13, 0.1) 0 0.25rem 0.375rem 0;
+
+  .top-header {
+    background-color: $colorBlue;
+    display: flex;
+    padding: 9px 110px 9px 25px;
+    color: $colorWhite;
+
+    p {
+      list-style-type: none;
+      text-align: right;
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+
+      &:nth-child(1) {
+        flex-grow: 2;
+        font-size: 17px;
+
+        animation: mymove 2000ms linear infinite;
+
+        @keyframes mymove {
+          0% {opacity: 0;}
+          50% {opacity: 1;}
+          100% {opacity: 0;}
+        }
+      }
+
+      &:nth-child(2) {
+        flex-grow: 6;
+        font-size: 16px;
+
+        i {
+          opacity: 0.6;
+          margin-right: 7px;
+          margin-left: 22px;
+
+          &.icon-clock {
+            font-size: 14px;
+          }
+
+          &.icon-phone {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
   }
 
-  li:nth-child(1) {
-    flex-grow: 2;
-    font-size: 17px;
+  .bottom-header {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    justify-content: space-between;
+
+    img {
+      width: 122px;
+      position: absolute;
+      top: -44px;
+      left: 0;
+      box-shadow: rgba(13, 13, 13, 0.1) 0 0.25rem 0.375rem 0;
+    }
+
+    nav {
+      display: flex;
+      margin-left: 130px;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $colorBlack;
+        line-height: 38px;
+        background-color: transparent;
+        padding: 0 15px;
+
+        &.selected {
+          text-underline-offset: 0.2em;
+          text-decoration-color: #fbe122;
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    .dropdown-holder {
+      margin-right: 20px;
+    }
   }
-  li:nth-child(2){
-    flex-grow: 6;
-    font-size: 16px;
-  }
+
 }
