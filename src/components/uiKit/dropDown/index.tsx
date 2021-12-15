@@ -39,13 +39,19 @@ const DropDown = ({ options, value, handleSelect }: IProps) => {
       className="dropdown-holder"
       tabIndex={0}
       onBlur={(event) => closeDropDown(event)}
+      ref={dropDownHolderRef}
     >
       <div
         className="select-value-holder"
         onClick={() => setIsOpened((prevState) => !prevState)}
       >
         <div className="value-holder">
-          <div className="select-value">{selectedOption.label}</div>
+          <div className="select-value">
+            {selectedOption.icon && (
+              <i className={`opt-i ${selectedOption.icon}`} />
+            )}
+            <span>{selectedOption.label}</span>
+          </div>
           <i className="icon-chevron-down-solid" />
         </div>
       </div>
@@ -54,6 +60,7 @@ const DropDown = ({ options, value, handleSelect }: IProps) => {
           {options.map((option) => (
             <div className="dropdown-option">
               <p onClick={() => onSelect(option.value)}>
+                {option.icon && <i className={`opt-i ${option.icon}`} />}
                 <span>{option.label}</span>
               </p>
               {option.value === value && <i className="icon-check-solid" />}

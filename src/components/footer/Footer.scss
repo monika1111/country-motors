@@ -1,0 +1,114 @@
+@import "src/assets/styles/valiables";
+
+.footer-holder {
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  padding: 0 0 11px 0;
+
+  .footer-top {
+    width: 100%;
+    display: flex;
+    font-family: $generalFontFamily;
+    padding: 37px 15px 25px 15px;
+    box-shadow: 0 0 4px rgba($colorYellow, 0.9);
+
+    .footer-item {
+      p {
+        padding: 5px 0;
+        letter-spacing: 1px;
+
+        &.header {
+          text-transform: uppercase;
+          font-size: 21px;
+          padding-bottom: 15px;
+          font-weight: 500;
+          color: $colorYellow;
+        }
+
+        .phone-numbers.first {
+          margin-right: 10px;
+        }
+
+        i {
+          margin-right: 5px;
+
+          &.icon-phone {
+            font-size: 12px;
+          }
+        }
+
+
+      }
+
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    padding: 18px 15px 0 12px;
+
+    .social-icons {
+      display: flex;
+
+      a {
+        margin-right: 10px;
+
+        img {
+          width: 35px;
+          height: 35px;
+
+          &.icon-viber {
+            width: 26px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .copy-right {
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-size: 13px;
+      align-self: self-end;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .footer-holder {
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    padding: 0 0 11px 0;
+
+    .footer-top {
+      padding: 15px 15px 25px 15px;
+    }
+
+
+    .footer-bottom {
+      display: inline-block;
+
+      .social-icons {
+        a {
+          img {
+            width: 30px;
+
+            &.icon-viber {
+              width: 22px;
+            }
+          }
+        }
+      }
+
+      .copy-right {
+        font-size: 12px;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}

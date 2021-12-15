@@ -1,9 +1,21 @@
+@import "src/assets/styles/valiables";
+
 .dropdown-holder {
   width: 6rem;
-  z-index: 400;
+  z-index: 3;
   position: relative;
   cursor: pointer;
   font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  .opt-i {
+    width: 18px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+
 
   .select-value-holder {
     max-width: inherit;
@@ -12,7 +24,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.13);
   }
 
   .value-holder {
@@ -23,13 +35,16 @@
     .icon-chevron-down-solid {
       flex-grow: 1;
       text-align: right;
-      padding-top: 5px;
+      padding-top: 7px;
+      font-size: 12px;
     }
 
     .select-value {
       position: relative;
       z-index: 1;
       flex-grow: 1;
+      display: flex;
+      align-items: baseline;
     }
   }
 
@@ -45,15 +60,22 @@
     background-color: #fff;
 
     .dropdown-option {
-      padding: 0 0.5rem;
+      padding: 0.2rem 0.5rem;
       display: flex;
+
+      &:hover {
+        background-color: $colorYellow;
+        opacity: 0.9;
+      }
 
       p {
         margin: 0;
         flex-grow: 2;
+        display: flex;
+        align-items: baseline;
       }
 
-      i {
+      .icon-check-solid {
         flex-grow: 1;
         margin-top: 8px;
         font-size: 12px;
