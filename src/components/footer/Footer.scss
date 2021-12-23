@@ -5,6 +5,7 @@
   background-color: #121212;
   color: white;
   padding: 0 0 11px 0;
+  grid-area: footer;
 
   .footer-top {
     width: 100%;
@@ -77,12 +78,13 @@
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (min-width: 320px) and (max-width: 995px) {
   .footer-holder {
     width: 100%;
     background-color: #121212;
     color: white;
     padding: 0 0 11px 0;
+    grid-area: footer;
 
     .footer-top {
       padding: 15px 15px 25px 15px;
