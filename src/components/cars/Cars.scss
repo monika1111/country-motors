@@ -1,0 +1,99 @@
+@import "src/assets/styles/valiables";
+
+.cars-content {
+  padding: 25px 13px 0 13px;
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    padding: 0 25px 0 25px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px #eaeaea solid;
+    cursor: pointer;
+
+    .info-c {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px #ececec solid;
+
+      .price-c {
+        font-weight: 600;
+        font-size: 18px;
+        background-color: $colorYellow;
+        transform: skew(-14deg, 0deg);
+        padding: 0 4px;
+      }
+
+      .name-c {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .description-c {
+        color: #666;
+        line-height: 1.5em;
+        font-size: 15px;
+      }
+
+      .phone-c {
+        padding: 10px 0;
+        font-size: 13px;
+        line-height: normal;
+        margin: 2px 0;
+        color: #999;
+
+        .phone-numbers {
+          &.first {
+            margin-right: 10px;
+          }
+        }
+
+        i {
+          color: $colorYellow;
+          font-size: 12px;
+          margin-right: 4px;
+        }
+
+      }
+    }
+
+    .other-info {
+      display: flex;
+      justify-content: space-between;
+      color: #888;
+
+      i{
+        margin-right: 3px;
+        font-size: 12px;
+      }
+    }
+
+    .img-c {
+      width: 19rem;
+      height: 10rem;
+      object-fit: contain;
+    }
+
+    .view-more-d {
+      padding: 10px 20px 10px 20px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      background: $colorYellow;
+      display: inline-block;
+      line-height: 1;
+      cursor: pointer;
+
+      .icon-arrow-right {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
