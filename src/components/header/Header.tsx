@@ -1,30 +1,49 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
+import "./header.scss";
+import "../../assets/fonts/icomoon/style.css";
+
+
+import useSelectedMenuItem from "../../hook/useSelectedMenuItem";
+import MobileMenu from "../mobileMenu/MobileMenu";
 import DropDown from "../uiKit/dropDown";
 import { LanguageOptions } from "../../constants";
 import Logo from "../../assets/images/logo.png";
 import { Menu } from "../../constants";
 
-import "./header.scss";
-import "../../assets/fonts/icomoon/style.css";
-import useSelectedMenuItem from "../../hook/useSelectedMenuItem";
-import MobileMenu from "../mobileMenu/MobileMenu";
+const setLanguage = window.localStorage.getItem("language");
+
+const defaultLanguage = setLanguage ? setLanguage : LanguageOptions[0].value;
 
 const Header = () => {
-  const [language, setLanguage] = useState(LanguageOptions[0].value);
+  const [language, setLanguage] = useState(defaultLanguage);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
+  const { t, i18n } = useTranslation("common");
+
   const selectedMenu = useSelectedMenuItem();
+
+  const onSelectLanguage = useCallback((val: string) => {
+    setLanguage(val);
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    window.localStorage.setItem("language", val);
+  }, []);
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [i18n, language]);
 
   return (
     <header>
       <div className="top-header">
-        <p className="offer">Find the best auction cars deals!</p>
+        <p className="offer">{t("Find the best auction cars deals!")}</p>
         <div className="header-info">
           <p className="days-h">
             <i className="icon-clock" />
-            <span className="hours-info">Mon - Sat : 09am to 06pm</span>
+            <span className="hours-info">{t("Mon - Sat : 09am to 06pm")}</span>
           </p>
           <p className="phone-h">
             <i className="icon-phone" />
@@ -49,15 +68,25 @@ const Header = () => {
               to={item.to}
               className={selectedMenu === item.to ? "selected" : ""}
             >
-              {item.name}
+              {t(item.name)}
             </Link>
           ))}
         </nav>
-        <DropDown
-          options={LanguageOptions}
-          handleSelect={setLanguage}
-          value={language}
-        />
+        <div className="right-part">
+          <Link
+            to={"/calculator"}
+            className={`calc-link ${
+              selectedMenu === "calculator" ? "selected" : ""
+            }`}
+          >
+            <i className="icon-calculator" />
+          </Link>
+          <DropDown
+            options={LanguageOptions}
+            handleSelect={(val: string) => onSelectLanguage(val)}
+            value={language}
+          />
+        </div>
       </div>
       {openMobileMenu && (
         <MobileMenu closeMobileMenu={() => setOpenMobileMenu(false)} />

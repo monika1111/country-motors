@@ -1,11 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { I18nextProvider } from "react-i18next";
+import i18next from "i18next";
+
+import "./index.scss";
+
+import App from "./App";
+import trans_am from "./translations/am/common.json";
+import trans_en from "./translations/en/common.json";
+import trans_ru from "./translations/ru/common.json";
+
+i18next.init({
+  interpolation: { escapeValue: false }, // React already does escaping
+  lng: "en",
+  resources: {
+    en: {
+      common: trans_en,
+    },
+    ru: {
+      common: trans_ru,
+    },
+    am: {
+      common: trans_am,
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <I18nextProvider i18n={i18next}>
+      <App />
+    </I18nextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

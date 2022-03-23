@@ -1,14 +1,13 @@
 @import "src/assets/styles/valiables";
 
-.swiper-container {
+.swiper {
+  width: 100%;
+  height: 350px;
+
   .swiper-button-prev, .swiper-button-next {
     color: $colorBlack;
   }
 
-  .swiper {
-    width: 100%;
-    height: 350px;
-  }
 
   .swiper-slide {
     text-align: center;

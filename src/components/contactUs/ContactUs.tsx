@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import AboutUsBG from "../../assets/images/about-us-bg.jpg";
 
 import "./ContactUs.scss";
 
 const ContactUs = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="contact-us">
       <div className="contact-us-bg">
@@ -13,22 +16,22 @@ const ContactUs = () => {
       <div className="contact-us-form-holder">
         <ul className="contact-us-form">
           <li className="full-grid-column contact-us-title">
-            <h2>Contact Us</h2>
+            <h2>{t("Contact Us")}</h2>
           </li>
           <li>
-            <label> Your Name *</label>
+            <label> {t("Your Name *")}</label>
             <input type="text" name="name" />
           </li>
           <li>
-            <label> Your Email *</label>
+            <label> {t("Your Email *")}</label>
             <input type="text" name="email" />
           </li>
           <li className="full-grid-column">
-            <label>Subject</label>
+            <label>{t("Subject")}</label>
             <input type="text" name="subject" />
           </li>
           <li className="full-grid-column">
-            <label>Message</label>
+            <label> {t("Message")}</label>
             <textarea />
           </li>
           <li className="submit">

@@ -11,7 +11,11 @@ const useSelectedMenuItem = () => {
       location.pathname.includes(item.to)
     );
 
-    return selectedMenuItem ? selectedMenuItem.to : Menu[0].to;
+    return selectedMenuItem
+      ? selectedMenuItem.to
+      : !location.pathname.includes("calculator")
+      ? Menu[0].to
+      : "calculator";
   }, [location.pathname]);
 };
 

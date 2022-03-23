@@ -32,5 +32,10 @@ html, body {
         "footer";
   grid-template-rows: auto auto auto;
   grid-template-columns: 100%;
+
+  .error-msg {
+    color: red;
+    font-size: 12px;
+  }
 }
 

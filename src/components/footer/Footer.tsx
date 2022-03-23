@@ -1,19 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-import Facebook from "assets/images/socialIIcons/facebook.svg";
-import Instagram from "assets/images/socialIIcons/instagram.svg";
-import Viber from "assets/images/socialIIcons/viber.svg";
-import WhatsApp from "assets/images/socialIIcons/whatsapp.svg";
+import Facebook from "../../assets/images/socialIIcons/facebook.svg";
+import Instagram from "../../assets/images/socialIIcons/instagram.svg";
+import Viber from "../../assets/images/socialIIcons/viber.svg";
+import WhatsApp from "../../assets/images/socialIIcons/whatsapp.svg";
 
 import "./Footer.scss";
 
 const Footer = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="footer-holder">
       <div className="footer-top">
         <div className="footer-item about-us">
-          <p className="header">Contact Us</p>
-          <p>Armenia, Yerevan, Bayron 3</p>
+          <p className="header">{t("Contact Us")}</p>
+          <p>{t("Armenia, Yerevan, Bayron 3")}</p>
           <p className="phone-h">
             <i className="icon-phone" />
             <span className="phone-numbers first">+374 43 14-44-49</span>
@@ -22,7 +25,7 @@ const Footer = () => {
           </p>
           <p className="days-h">
             <i className="icon-clock" />
-            <span className="hours-info">Mon - Sat : 09am to 06pm</span>
+            <span className="hours-info">{t("Mon - Sat : 09am to 06pm")}</span>
           </p>
           <p>country.motorservice@mail.ru</p>
         </div>

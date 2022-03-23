@@ -111,24 +111,45 @@ header {
       display: none;
     }
 
-    .dropdown-holder {
-      margin-right: 20px;
-      background-color: $colorWhite;
-      color: $colorBlack;
+    .right-part {
+      display: flex;
+      align-items: center;
 
-      i.opt-i {
-        background: url(../../assets/images/flags.png) no-repeat 0 0/100%;
+      .calc-link {
+        display: flex;
+        text-decoration: none;
+        color: $colorWhite;
+        cursor: pointer;
 
-        &.flag-en {
-          background-position: 0 34.0996%;
+        &.selected {
+          color: $colorYellow;
         }
 
-        &.flag-am {
-          background-position: 0 5.1648%;
+        .icon-calculator {
+          margin-right: 22px;
+          font-size: 26px;
         }
+      }
 
-        &.flag-ru {
-          background-position: 0 73.0566%;
+      .dropdown-holder {
+        margin-right: 20px;
+        background-color: $colorWhite;
+        color: $colorBlack;
+
+        i.opt-i {
+          background: url(../../assets/images/flags.png) no-repeat 0 0/100%;
+
+          &.flag-en {
+            background-position: 0 34.0996%;
+          }
+
+          &.flag-am {
+            background-position: 0 5.1648%;
+          }
+
+          &.flag-ru {
+            background-position: 0 73.0566%;
+          }
         }
       }
     }
@@ -153,8 +174,9 @@ header {
         display: inline-block;
 
         &.offer {
-          padding-left: 0;
+          padding-left: 29px;
           text-align: center;
+          font-size: 14px;
         }
 
         &.header-info {

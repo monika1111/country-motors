@@ -5,7 +5,7 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import Car_2 from "../../../assets/images/slideImages/car_2.jpg";
 import Car_3 from "../../../assets/images/slideImages/car_3.jpg";
 
-import "swiper/swiper-bundle.css";
+import "swiper/css";
 import "./index.scss";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
