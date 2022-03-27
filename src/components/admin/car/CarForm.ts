@@ -31,7 +31,7 @@ const CarForm: IFormElement[][][] = [
                     pattern: {
                         default: {
                             regexp: "^\\d+(\\.\\d+)?$",
-                            message: "Car Price should be number.",
+                            message: "Mileage should be number.",
                         },
                     },
                 },
@@ -65,7 +65,7 @@ const CarForm: IFormElement[][][] = [
                 label: "Color *",
                 rules: {
                     required: {
-                        message: "Car Brand is required.",
+                        message: "Color is required.",
                     }
                 },
             },
@@ -78,7 +78,7 @@ const CarForm: IFormElement[][][] = [
                     pattern: {
                         default: {
                             regexp: "^\\d+(\\.\\d+)?$",
-                            message: "Car Price should be number.",
+                            message: "Doors' number should be number.",
                         },
                     },
                 }
@@ -94,7 +94,7 @@ const CarForm: IFormElement[][][] = [
                     pattern: {
                         default: {
                             regexp: "^\\d+(\\.\\d+)?$",
-                            message: "Car Price should be number.",
+                            message: "Price should be number.",
                         },
                     },
                 },
@@ -104,13 +104,18 @@ const CarForm: IFormElement[][][] = [
         [
             {
                 type: "image",
-                name: "image",
-                label: "Image",
+                name: "images",
+                label: "Images",
+                value: [],
                 rules: {
-                    required: {
-                        message: "Price is required.",
+                    pattern: {
+                        default: {
+                            regexp:
+                                "^(data:image\\/(?:|png|jpeg|jpg)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}|(data:application\\/pdf(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}))$",
+                            message: "Please upload valid type of image.",
+                        },
                     },
-                }
+                },
             }
         ]
     ],

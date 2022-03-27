@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useCallback} from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Cars.scss"
 
@@ -7,12 +8,18 @@ import DropDown from "../../uiKit/dropDown";
 import { CarsPlace } from "../../../constants/options";
 
 const Cars = () => {
+    const navigate = useNavigate();
+
+    const handleAddCar = useCallback(() => {
+        navigate("-1")
+    }, [])
+
     return (
-        <div className="cars-content">
+        <div className="cars-container">
             <h2>Cars</h2>
             <div className="actions">
                 <DropDown options={CarsPlace} handleSelect={() => {}}/>
-                <button className="add-car"> <i className="icon-plus"/>Add Car</button>
+                <button className="add-car" onClick={handleAddCar}> <i className="icon-plus"/>Add Car</button>
             </div>
             <table>
                 <thead>

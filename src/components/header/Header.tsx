@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import "./header.scss";
@@ -20,6 +20,8 @@ const defaultLanguage = setLanguage ? setLanguage : LanguageOptions[0].value;
 const Header = () => {
   const [language, setLanguage] = useState(defaultLanguage);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+
+  const navigate = useNavigate();
 
   const { t, i18n } = useTranslation("common");
 
@@ -52,7 +54,7 @@ const Header = () => {
             <span className="phone-numbers">+374 96 44-10-44</span>
           </p>
         </div>
-        <img src={Logo} alt="logo.jpg" />
+        <img src={Logo} alt="logo.jpg" onClick={() => navigate("")} />
       </div>
       <div className="bottom-header">
         <p className="bottom-header-p">

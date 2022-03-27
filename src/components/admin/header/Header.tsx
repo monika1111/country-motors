@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Header.scss"
 
@@ -6,9 +7,11 @@ import Logo from "../../../assets/images/logo.png";
 import Popover from "../../uiKit/popover";
 
 const Header = () => {
+    const navigation = useNavigate();
+
     return (
         <div className="admin-header">
-            <img src={Logo} alt="logo.jpg"/>
+            <img src={Logo} alt="logo.jpg" onClick={() => navigation("")}/>
 
             <Popover
                 placement="bottom-start"

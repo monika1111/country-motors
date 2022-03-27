@@ -6,6 +6,7 @@ import "./Admin.scss";
 import Header from "./header/Header";
 import Cars from "./cars/Cars";
 import Car from "../admin/car/Car";
+import Login from "./login/Login";
 
 const Admin = () => {
 
@@ -17,6 +18,7 @@ const Admin = () => {
                     <Route path="/" element={<Navigate to="cars" />} />
                     <Route path={`/cars/:carId`} element={<Car/>}/>
                     <Route path={`/cars`} element={<Cars/>}/>
+                    <Route path={`/login`} element={<Login/>}/>
                 </Routes>
             </div>
         </div>
