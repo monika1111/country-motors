@@ -1,15 +1,15 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import "./Calculator.scss";
 
 import AboutUsBG from "../../assets/images/about-us-bg.jpg";
 
-import "../../components/contactUs/ContactUs.scss";
-import "./Calculator.scss";
-
-import DropDown from "../uiKit/dropDown";
-import { ageOptions, carTypesOptions } from "../../constants/options";
 import useForm, { FormEventType } from "../../hook/useForm";
+import { ageOptions, carTypesOptions } from "../../constants/options";
 import CalculatorForm from "./CalculatorForm";
+import DropDown from "../uiKit/dropDown";
+
 
 const Calculator = () => {
   const [tax, setTax] = useState<number | null>(null);

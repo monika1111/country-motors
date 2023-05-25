@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Header.scss"
@@ -11,10 +10,10 @@ const Header = () => {
 
     return (
         <div className="admin-header">
-            <img src={Logo} alt="logo.jpg" onClick={() => navigation("")}/>
+            <img src={Logo} alt="logo.png" onClick={() => navigation("")}/>
 
             <Popover
-                placement="bottom-start"
+                placement="bottom-end"
                 type="click"
                 content={<p className="admin-popper">Log Out</p>}
             >

@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import AboutUsBG from "../../assets/images/about-us-bg.jpg";

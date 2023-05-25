@@ -84,7 +84,7 @@
 
       td, th {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 0.5rem 1.2rem 0.5rem 2rem;
+        padding: 0.5rem 1.2rem 0.5rem 1.2rem;
         text-overflow: ellipsis;
         text-align: left;
 
@@ -110,12 +110,28 @@
         }
 
         img {
-          max-width: 17.8rem;
+          max-width: 16rem;
           height: 5rem;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
   }
 }
 
+
+@media only screen and (min-width: 320px) and (max-width: 995px) {
+  .cars-container {
+    table {
+      tr {
+        td {
+
+          img {
+            max-width: 80px;
+            max-height: 70px;
+          }
+        }
+      }
+    }
+  }
+}

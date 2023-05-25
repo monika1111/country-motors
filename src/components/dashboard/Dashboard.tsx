@@ -1,11 +1,10 @@
-import React from "react";
+import "./Dashboard.scss";
 
 import Car_1 from "../../assets/images/slideImages/car_1.jpg";
 import Car_2 from "../../assets/images/slideImages/car_2.jpg";
 import Car_3 from "../../assets/images/slideImages/car_3.jpg";
 
-import "./Dashboard.scss";
-import SwiperComp from "../uiKit/swiperComponent/swiper";
+import SwiperComp from "../uiKit/swiperComponent/SwiperComponent";
 
 const Dashboard = () => {
   return (

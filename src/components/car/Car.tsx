@@ -1,9 +1,8 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./Car.scss";
 
-import SwiperComp from "../uiKit/swiperComponent/swiper";
-import {useTranslation} from "react-i18next";
+import SwiperComp from "../uiKit/swiperComponent/SwiperComponent";
 
 const car: ICar = {
   id: 1,
@@ -11,7 +10,7 @@ const car: ICar = {
   model: "Volt",
   image: [
     "https://klbtheme.com/harrier/wp-content/uploads/2018/09/p1.jpg",
-    "https://klbtheme.com/harrier/wp-content/uploads/2018/09/p3.jpg"
+    "https://klbtheme.com/harrier/wp-content/uploads/2018/09/p3.jpg",
   ],
   year: 2017,
   color: "Black",
@@ -22,7 +21,7 @@ const car: ICar = {
   Transmission: "Automatic",
   doors: 5,
   description:
-    "Bought from an American non-accident auction. The car is on the road, it will be in Armenia in September. The price includes all costs, including customs clearance"
+    "Bought from an American non-accident auction. The car is on the road, it will be in Armenia in September. The price includes all costs, including customs clearance",
 };
 
 const Car = () => {
@@ -32,7 +31,11 @@ const Car = () => {
     <div className="car-page-container">
       <div className="car-page-content">
         <div className="images-content">
-          <SwiperComp images={car.image} thumbMode={true} classNames="car-info-img" />
+          <SwiperComp
+            images={car.image}
+            thumbMode={true}
+            classNames="car-info-img"
+          />
         </div>
         <div className="car-info-content">
           <p className="car-info-full-name">{`${car.brand} ${car.model}`}</p>
@@ -40,9 +43,7 @@ const Car = () => {
             <i className="icon-phone" />
             <span className="phone-numbers first">+374 43 14-44-49</span>
             <i className="icon-email" />
-            <span className="phone-numbers">
-          country.motorservice@mail.ru
-        </span>
+            <span className="phone-numbers">country.motorservice@mail.ru</span>
           </p>
           <p className="price-block">{car.price}$</p>
           <div className="specifications">
@@ -50,31 +51,45 @@ const Car = () => {
             <ul>
               <li>
                 <p>{t("Mileage")}</p>
-                <p><span className="two-points">:</span>85,000 miles</p>
+                <p>
+                  <span className="two-points">:</span>85,000 miles
+                </p>
               </li>
               <li>
                 <p>{t("Year")}</p>
-                <p><span className="two-points">:</span>2015</p>
+                <p>
+                  <span className="two-points">:</span>2015
+                </p>
               </li>
               <li>
                 <p>{t("Engine")}</p>
-                <p><span className="two-points">:</span>V6 3,0 l</p>
+                <p>
+                  <span className="two-points">:</span>V6 3,0 l
+                </p>
               </li>
               <li>
                 <p>{t("Fuel")}</p>
-                <p><span className="two-points">:</span>Diesel</p>
+                <p>
+                  <span className="two-points">:</span>Diesel
+                </p>
               </li>
               <li>
                 <p>{t("Transmission")}</p>
-                <p><span className="two-points">:</span>Automatic</p>
+                <p>
+                  <span className="two-points">:</span>Automatic
+                </p>
               </li>
               <li>
                 <p>{t("Color")}</p>
-                <p><span className="two-points">:</span>White</p>
+                <p>
+                  <span className="two-points">:</span>White
+                </p>
               </li>
               <li>
                 <p>{t("Doors")}</p>
-                <p><span className="two-points">:</span>5</p>
+                <p>
+                  <span className="two-points">:</span>5
+                </p>
               </li>
             </ul>
           </div>

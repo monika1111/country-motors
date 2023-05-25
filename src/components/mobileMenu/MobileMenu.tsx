@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
+
+import "./MobileMenu.scss";
 
 import Logo from "../../assets/images/logo.png";
 import { Menu } from "../../constants";
 import useSelectedMenuItem from "../../hook/useSelectedMenuItem";
-
-import "./MobileMenu.scss";
 
 interface IProps {
   closeMobileMenu: CallableFunction;
@@ -18,7 +17,7 @@ const MobileMenu = ({ closeMobileMenu }: IProps) => {
     <div className="m-device-menu">
       <div className="m-menu-header">
         <img src={Logo} alt="logo" />
-        <span className="cm">Country Motor</span>
+        <span className="cm">Central Motors</span>
         <i
           className="icon-icon-close close"
           onClick={() => closeMobileMenu()}

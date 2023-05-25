@@ -1,5 +1,5 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Dashboard from "../dashboard/Dashboard";
 import Container from "../container/Container";
 import CarsComponent from "../cars/CarsComponent";
@@ -22,8 +22,7 @@ const Router = () => {
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="calculator" element={<Calculator />} />
         </Route>
-        <Route path="/admin/*" element={<Admin />}>
-        </Route>
+        <Route path="/admin/*" element={<Admin />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,7 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import "./styles.scss";
+import "./SwiperComponent.scss";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper";
@@ -21,7 +20,7 @@ interface IProps {
   thumbClassNames?: string;
 }
 
-const SwiperComp = ({
+const SwiperComponent = ({
   thumbMode = false,
   images,
   classNames,
@@ -86,4 +85,4 @@ const SwiperComp = ({
   );
 };
 
-export default SwiperComp;
+export default SwiperComponent;

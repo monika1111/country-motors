@@ -1,6 +1,7 @@
 @import "mixinsAndFunctions";
 $popoverClassName: ".popover-positioner-j";
 #{$popoverClassName} {
+  transform: translate3d(-15px, 60px, 0px) !important;
   @include zIndex(popover);
   --popover-border-radius: #{rem(10)};
   --popover-shadow: 0 #{rem(2)} #{rem(4)} 0 rgba(0, 0, 0, 0.05), 0 0 0 #{rem(1)} #{sc(b, 0.08)};

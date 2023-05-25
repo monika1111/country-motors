@@ -1,12 +1,11 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
+
+import "./Footer.scss";
 
 import Facebook from "../../assets/images/socialIIcons/facebook.svg";
 import Instagram from "../../assets/images/socialIIcons/instagram.svg";
 import Viber from "../../assets/images/socialIIcons/viber.svg";
 import WhatsApp from "../../assets/images/socialIIcons/whatsapp.svg";
-
-import "./Footer.scss";
 
 const Footer = () => {
   const { t } = useTranslation("common");
@@ -45,7 +44,7 @@ const Footer = () => {
             <img src={Viber} className="icon-viber" alt="viber" />
           </a>
         </div>
-        <p className="copy-right">© 2010 - 2021 Country Motor</p>
+        <p className="copy-right">© 2015 - 2022 Central Motors</p>
       </div>
     </div>
   );

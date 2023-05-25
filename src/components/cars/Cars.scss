@@ -6,13 +6,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 150px;
 
   li {
-    padding: 0 25px 0 25px;
+    padding: 0 30px;
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
-    border-right: 1px #eaeaea solid;
     cursor: pointer;
 
     .info-c {
@@ -67,6 +67,8 @@
       display: flex;
       justify-content: space-between;
       color: #888;
+      background: #e6e6e69e;
+      padding: 0 7px;
 
       i{
         margin-right: 3px;

@@ -15,7 +15,7 @@
     width: 100%;
   }
 
-  .car-actions{
+  .car-actions {
     display: flex;
     margin: 30px 0;
 
@@ -52,16 +52,20 @@
       list-style-type: none;
       display: block;
 
-      .file-upload{
+      .car-details-item {
+        width: 50%;
+      }
+
+      .file-upload {
         display: block;
       }
 
-      .uploaded-images{
+      .uploaded-images {
         display: flex;
         flex-wrap: wrap;
         margin-top: 33px;
 
-        .image-content{
+        .image-content {
           width: 160px;
           height: 160px;
           justify-content: space-between;
@@ -115,6 +119,7 @@
     .car-details-item {
       list-style-type: none;
       padding: 10px 10px;
+      min-width: 260px;
 
       label {
         font-size: 14px;
@@ -127,7 +132,7 @@
         padding: 10px;
         margin-top: 3px;
 
-        &.file-upload{
+        &.file-upload {
           cursor: pointer;
         }
       }
@@ -140,6 +145,14 @@
           padding: 8px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 995px) {
+  .admin-car-content {
+    .car-details {
+      display: block;
     }
   }
 }

@@ -3,13 +3,14 @@
 
   .dashboard-slide {
     width: 100%;
-    height: 350px;
+    height: 450px;
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 995px) {
   .dashboard {
     .dashboard-slide{
+      max-height: 350px;
       .swiper {
         //height: 160px;
       }

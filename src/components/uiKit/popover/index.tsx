@@ -13,7 +13,14 @@ interface IProps {
   className?: string;
 }
 
-const Popover: React.FC<IProps> = ({ content, children, placement = "right-start", type = "hover", appearance = "default", className }) => {
+const Popover: React.FC<IProps> = ({
+  content,
+  children,
+  placement = "right-start",
+  type = "hover",
+  appearance = "default",
+  className,
+}) => {
   const [referenceElement, setReferenceElement] = useState<any>(null);
   const [popperElement, setPopperElement] = useState<any>(null);
   const [visible, setVisibility] = useState(false);
@@ -25,7 +32,10 @@ const Popover: React.FC<IProps> = ({ content, children, placement = "right-start
 
   const handleDocumentClickOrHover = useCallback(
     (event: any) => {
-      if ((popperElement && popperElement.contains(event.target)) || (referenceElement && referenceElement.contains(event.target))) {
+      if (
+        (popperElement && popperElement.contains(event.target)) ||
+        (referenceElement && referenceElement.contains(event.target))
+      ) {
         setVisibility(true);
 
         return;
@@ -47,10 +57,7 @@ const Popover: React.FC<IProps> = ({ content, children, placement = "right-start
 
   return (
     <>
-      <div
-        className={"popover-reference"}
-        ref={setReferenceElement}
-      >
+      <div className={"popover-reference"} ref={setReferenceElement}>
         {children}
       </div>
       {visible &&

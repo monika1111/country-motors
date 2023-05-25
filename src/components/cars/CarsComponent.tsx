@@ -3,10 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import "./CarsComponents.scss";
 
-import Cars from "./Cars";
-// @ts-ignore
 import AboutUsBG from "../../assets/images/about-us-bg.jpg";
-import cars from "./Cars";
+import Cars from "./Cars";
 
 const CarsComponent = () => {
   const [activeIndex, setActiveIndex] = useState(0);

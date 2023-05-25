@@ -5,13 +5,13 @@ import { useTranslation } from "react-i18next";
 import "./header.scss";
 import "../../assets/fonts/icomoon/style.css";
 
+import Logo from "../../assets/images/logo.png";
 
+import { Menu } from "../../constants";
+import { LanguageOptions } from "../../constants";
 import useSelectedMenuItem from "../../hook/useSelectedMenuItem";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import DropDown from "../uiKit/dropDown";
-import { LanguageOptions } from "../../constants";
-import Logo from "../../assets/images/logo.png";
-import { Menu } from "../../constants";
 
 const setLanguage = window.localStorage.getItem("language");
 
@@ -54,7 +54,7 @@ const Header = () => {
             <span className="phone-numbers">+374 96 44-10-44</span>
           </p>
         </div>
-        <img src={Logo} alt="logo.jpg" onClick={() => navigate("")} />
+        <img src={Logo} alt="logo.png" onClick={() => navigate("")} />
       </div>
       <div className="bottom-header">
         <p className="bottom-header-p">
