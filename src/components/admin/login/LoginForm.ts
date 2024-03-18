@@ -3,11 +3,11 @@ const LoginForm: IFormElement[][][] = [
         [
             {
                 type: "text",
-                name: "login",
-                label: "Login",
+                name: "email",
+                label: "Email",
                 rules: {
                     required: {
-                        message: "Login is required.",
+                        message: "Email is required.",
                     }
                 },
             },
